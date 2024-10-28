@@ -1,0 +1,77 @@
+# 百事可乐wps签到得积分
+
+仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断。本人对任何脚本问题概不负责，包括但不限于由任何脚本错误导致的任何损失或损害。
+
+# **简述**
+
+聚合脚本新增新脚本步骤：
+
+1.复制并运行最新的更新脚本（UPDATE.js)脚本自动新增最新表格及配置
+
+2.复制最新的签到脚本，并添加网络API服务和加入定时任务（若需要邮箱推送需添加邮箱API）
+
+文章中的代码已放入github仓库中
+
+```
+https://github.com/imoki
+```
+
+(文末会用临时文本的方式附上代码，以利于访问github较慢的使用者采用。由于后期会不定期更新代码功能，因此建议使用者从github上复制最新的代码)
+
+# **准备工作**
+
+[https://mmbiz.qpic.cn/sz_mmbiz_jpg/zZAR4Ynqicp80sLglCo3r5TH1icics6V10f8FfyAdDR0Uj4UR3OuGVluh9KrYeL6nwcMEKsVFdcXtoXGLdnP1ibKwg/640?wx_fmt=jpeg&from=appmsg&wxfrom=13](https://mmbiz.qpic.cn/sz_mmbiz_jpg/zZAR4Ynqicp80sLglCo3r5TH1icics6V10f8FfyAdDR0Uj4UR3OuGVluh9KrYeL6nwcMEKsVFdcXtoXGLdnP1ibKwg/640?wx_fmt=jpeg&from=appmsg&wxfrom=13)
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10fAo3ae3RH0GPDgxEsVGkq8mIJsFyFv9d9n1OaX03FjGnEJYYb3chqdw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10fAo3ae3RH0GPDgxEsVGkq8mIJsFyFv9d9n1OaX03FjGnEJYYb3chqdw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10foic4FUKsL9ZTk8PzXtxCCiaaov3nj82t7hCyGJ9jF5TXbAw45jAGVOLw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10foic4FUKsL9ZTk8PzXtxCCiaaov3nj82t7hCyGJ9jF5TXbAw45jAGVOLw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10fFcLq5xkZ2IUsN0jpUk6Ord3eO5Z7SSPpicMuHs1KibE0WADPeiaPPf4gA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10fFcLq5xkZ2IUsN0jpUk6Ord3eO5Z7SSPpicMuHs1KibE0WADPeiaPPf4gA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+需要Authorization、HH-APP、HH-FROM。浏览器抓取所需的值，如图复制所需要的值，如:bearer aaaa-aaaa-aaaa、wxxxxxxxx、22222222。此值后面表格中需要用到。
+
+# **实际操作**
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0MwsciaEA8wUlxaRPATzfFN4ozlpMn7qUkvxxtWW1urQu6K7Mz6GNbgQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0MwsciaEA8wUlxaRPATzfFN4ozlpMn7qUkvxxtWW1urQu6K7Mz6GNbgQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0ooVEnOwU08HWSAEtzUUg5LYqOHu1b7LbQqoQnaa7dZjIQs2SDww4Wg/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0ooVEnOwU08HWSAEtzUUg5LYqOHu1b7LbQqoQnaa7dZjIQs2SDww4Wg/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0STUucDT2YjfuRBE7QmKcn4ZyaF3OE9VVAEJs41iap7OaibskvZPrZUfw/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0STUucDT2YjfuRBE7QmKcn4ZyaF3OE9VVAEJs41iap7OaibskvZPrZUfw/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+
+1.进入github中复制最新的UPDATE.js的代码（此为更新脚本，运行则会自动新增表格配置、不会覆盖原有信息）
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0qx3wrL78IvziaZrMsJN61TAKV0ncYlQJ3v0lciannI9vEibGBnZLlA5oA/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0qx3wrL78IvziaZrMsJN61TAKV0ncYlQJ3v0lciannI9vEibGBnZLlA5oA/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0sH4zmwftO9B4wfwDbn2qdcVzxSAsTc1nr00ibeWickJcPIO7OvkfN4kw/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0sH4zmwftO9B4wfwDbn2qdcVzxSAsTc1nr00ibeWickJcPIO7OvkfN4kw/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+
+2.将复制的UPDATE.js代码粘贴到脚本编辑器中，点击"保存"，再点击运行。当UPDATE脚本运行完后，会自动生成配置表格。
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10fvxHd0z1fQu2EFOyehSwJM4PybN28hY49nc2TovBMIbKz3ETTicibOkJg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10fvxHd0z1fQu2EFOyehSwJM4PybN28hY49nc2TovBMIbKz3ETTicibOkJg/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10fLDORXqicuoavnLEsdh96rFTGPfh32KEsIS8meWg2Wibia6m3401Yg8atw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10fLDORXqicuoavnLEsdh96rFTGPfh32KEsIS8meWg2Wibia6m3401Yg8atw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0XTA8lziaGEgQRePuVJDBAE9RicEUYoRdCricCwMIe7hMYrjSicF20xNzrQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0XTA8lziaGEgQRePuVJDBAE9RicEUYoRdCricCwMIe7hMYrjSicF20xNzrQ/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10fz9gewm6wYmS6KBxVZs9iblMic3ibFVXvCeRhJe7KdZAE1u86d3mXfXcZw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10fz9gewm6wYmS6KBxVZs9iblMic3ibFVXvCeRhJe7KdZAE1u86d3mXfXcZw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+3.进入github中，复制所需脚本代码，如bsklsh.js。点击"+"将代码粘贴到编辑器内，并点击保存。
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp03f9qwApDzHjekmflOHiamnibPkpE3plAicmSFGkK5iarZ13KozPxJxqGqg/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp03f9qwApDzHjekmflOHiamnibPkpE3plAicmSFGkK5iarZ13KozPxJxqGqg/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+
+4.按图所示，点击“服务”-“添加服务”，再点击“网络API”对应的“添加”按钮。
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10fz9gewm6wYmS6KBxVZs9iblMic3ibFVXvCeRhJe7KdZAE1u86d3mXfXcZw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp80sLglCo3r5TH1icics6V10fz9gewm6wYmS6KBxVZs9iblMic3ibFVXvCeRhJe7KdZAE1u86d3mXfXcZw/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+5.填写分配置表的内容，如bsklsh表中第一列填的上述准备工作中获得到的所需要的值。
+
+（5.1. 可对点击“运行”进行测试。此测试步骤可忽略）
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0LxvUWgcicOU8REYUTgF5YoH4b9g7be2KhMXM8E851ZvQcpqoYlnmfdg/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp0LxvUWgcicOU8REYUTgF5YoH4b9g7be2KhMXM8E851ZvQcpqoYlnmfdg/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+
+6.依次点击“高级开发”-“定时任务”，将刚刚的脚本添加到定时任务中。
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp08gsd9S83P6MjibUiaaAHbdm4VHzOMMUatKXEBYUL47agF985f7BLQkqg/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9KWIjLlsFk7Vhjs2icvfNp08gsd9S83P6MjibUiaaAHbdm4VHzOMMUatKXEBYUL47agF985f7BLQkqg/640?wx_fmt=other&from=appmsg&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+
+[https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9RicR4Ek2MYvy0Nll9Sh21x16UDEgnAO4jPSoOj8ukFd0B9f1149G0nic0uices5ECFibmgtmLCvgicUA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp](https://mmbiz.qpic.cn/sz_mmbiz_png/zZAR4Ynqicp9RicR4Ek2MYvy0Nll9Sh21x16UDEgnAO4jPSoOj8ukFd0B9f1149G0nic0uices5ECFibmgtmLCvgicUA/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1&tp=webp)
+
+7.点击“创建任务”-“每天”，选择此脚本。此时就完成了，每天指定时间将会执行脚本。
